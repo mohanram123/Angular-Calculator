@@ -17,13 +17,13 @@ export class AppComponent {
     if(op == '+') return a + b;
     if(op == '-') return a - b;
     if(op == '*') return a * b;
-    if(op == '#') return a / b;
+    if(op == '/') return a / b;
   }
 
   // precendence of operators
   priority(op){
     if(op == '+' || op == '-') return 1
-    if(op == '*' || op == '#') return 2
+    if(op == '*' || op == '/') return 2
     return 0
   }
 
@@ -105,6 +105,13 @@ export class AppComponent {
   this.obj['outputResult'] = this.evaluate(eq);
 
   this.solution = JSON.stringify(this.obj);
+  
 }
+  reset(){
+    this.equation = '';
+    this.args = [];
+    this.obj = {};
+    this.solution = '';
+  }
 }
 

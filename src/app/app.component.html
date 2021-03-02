@@ -1,11 +1,12 @@
 <section>
-  <div class="example-label">Simple Calculator [ Use # for Division ]</div>
+  <div class="example-label">Simple Calculator</div>
   <br>
   <div class="example-button-row">
     <mat-form-field class="example-full-width">
       <input matInput [(ngModel)]="equation" placeholder="Equation">
     </mat-form-field>
     <button mat-button color="primary" (click)="calculate()">Submit</button>
+    <button mat-button color="warn" (click)="reset()">Reset</button>
   </div>
   <p>{{ solution }}</p>
 </section>

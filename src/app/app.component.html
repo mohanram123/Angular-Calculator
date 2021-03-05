@@ -1,12 +1,21 @@
-<section>
-  <div class="example-label">Simple Calculator</div>
-  <br>
-  <div class="example-button-row">
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Simple Calculator</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
     <mat-form-field class="example-full-width">
       <input matInput [(ngModel)]="equation" placeholder="Equation">
     </mat-form-field>
-    <button mat-button color="primary" (click)="calculate()">Submit</button>
-    <button mat-button color="warn" (click)="reset()">Reset</button>
-  </div>
-  <p>{{ solution }}</p>
-</section>
+    <p>{{ solution }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button color="primary" (click)="calculate()">SUBMIT</button>
+    <button  mat-button color="warn" (click)="reset()">RESET</button>
+  </mat-card-actions>
+</mat-card>
+
+<app-graph></app-graph>
+
+
+
